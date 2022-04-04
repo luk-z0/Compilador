@@ -201,6 +201,15 @@ public class Lexico {
 					throw new ExceptionToken(
 							"Erro: não foi aceito nas regras do relacional \"" + lexema.toString() + "\"");
 				}
+			case 11:
+				if(c== '/' && c=='/' ){
+					this.nextToken();
+				}
+				else if(c=='/' && c=='*'){
+					while(this.nextChar() != '*' && c != '/' ){
+						this.nextChar();
+					}						
+				}
 			case 99:
 				return new Token(lexema.toString(), Token.TIPO_FIM_CODIGO);
 			}
