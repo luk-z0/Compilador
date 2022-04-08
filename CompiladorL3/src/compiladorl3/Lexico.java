@@ -87,9 +87,9 @@ public class Lexico {
                         lexema.append(c);
                         estado = 7;
                     } else if (c == '+' || c == '-' || c == '/' || c == '*') { // regra ARITMETICO
-                        this.back();
-                        if (this.nextChar() == '/') {
-                            while (this.nextChar() != '\n') {
+                      if (this.nextChar() == '/') {
+                            this.back();
+                            if (this.nextChar() != '\n') {
                                 this.nextChar();
                             }
                             lexema.append(c);
@@ -97,7 +97,6 @@ public class Lexico {
                             estado = 10;
                             break;
                         }
-
                         lexema.append(c);
                         estado = 8;
                     } else if (c == '=') { // regra TIPO_ATRIBUICAO
