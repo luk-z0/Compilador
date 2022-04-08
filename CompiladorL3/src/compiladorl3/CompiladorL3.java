@@ -16,10 +16,11 @@ public class CompiladorL3 {
 	 * @throws ExceptionToken 
 	 */
 	public static void main(String[] args) throws ExceptionToken {
-		Lexico lexico = new Lexico("CompiladorL3\\src\\compiladorl3\\codigo.txt"); // IDE Eclipse
-		// Lexico lexico = new Lexico("src\\compiladorl3\\codigo.txt"); //IDE Netbeans
+		// lexico = new Lexico("CompiladorL3\\src\\compiladorl3\\codigo.txt"); // IDE Eclipse
+		//Lexico lexico = new Lexico("src\\compiladorl3\\codigo.txt"); //IDE Netbeans
 		// Lexico lexico = new
 		// Lexico("C:\\Users\\Renat\\OneDrive\\Documentos\\codigo.txt");
+		Lexico lexico =new Lexico("D:\\Code\\Compilador\\codigo.txt");
 
 		Token t = null;
 		while ((t = lexico.nextToken()) != null) {
