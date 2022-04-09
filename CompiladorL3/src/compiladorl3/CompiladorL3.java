@@ -20,7 +20,7 @@ public class CompiladorL3 {
 		//Lexico lexico = new Lexico("src\\compiladorl3\\codigo.txt"); //IDE Netbeans
 		// Lexico lexico = new
 		// Lexico("C:\\Users\\Renat\\OneDrive\\Documentos\\codigo.txt");
-		Lexico lexico =new Lexico("D:\\Code\\Compilador\\codigo.txt");
+		Lexico lexico =new Lexico("codigo.txt");
 
 		Token t = null;
 		while ((t = lexico.nextToken()) != null) {
